@@ -11,18 +11,17 @@ emails = [
 	'jxtmqikapfv@uqqckowiz@hyi',
 ]
 
-# Quantos '@' a pessoa digitou ?
-
-for email in emails:
-    contador = 0
+def verificar_se_e_email(email):
+	contador = 0
     for letra in email:
         if letra == '@':
             contador = contador + 1
-    if contador == 1:
-        print('Digitou um email válido')
-    else:
-        print('Não digitou um email')
-    
-	
+    return True if contador == 1 else False
 
+for email in emails:
+	if verificar_se_e_email(email):
+		print('é um email mesmo')
+	else:
+		print('num é não')
+        
 
